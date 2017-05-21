@@ -1,0 +1,6 @@
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Debug\EmployeePayslipGenerator.UnitTests.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Debug\EmployeePayslipGenerator.UnitTests.pdb
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\obj\Debug\EmployeePayslipGenerator.UnitTests.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\obj\Debug\EmployeePayslipGenerator.UnitTests.pdb
