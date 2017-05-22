@@ -9,6 +9,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace EmployeePayslipGenerator.UnitTests {
 	[TestClass]
 	public class ImportFileTests {
+		#region Variable Declarations
 		private readonly List<ImportFileDetail> validImportFileTest = new List<ImportFileDetail>();
 		private readonly EmployeePayslip validImportFile = new EmployeePayslip();
 		
@@ -21,17 +22,19 @@ namespace EmployeePayslipGenerator.UnitTests {
 		private readonly string expectedFirstNameErrorBody = @"Value for First Name cannot be blank";
 		private readonly string expectedLastNameErrorBody = @"Value for Last Name cannot be blank";
 		private readonly string expectedAnnualIncomeErrorBody = @"Value for Annual Income is not a valid decimal";
-		
 		private readonly string expectedSuperRateErrorBody = @"Value for Super Rate is not a valid decimal";
 		private readonly string expectedSuperRateOutOfRangeErrorBody = @"Value for Super Rate must be between 0 and 50%";
 		private readonly string expectedMonthStartingErrorBody = @"Value for Month Starting is not valid";
-
 		private readonly string invalidRecordFormat = @"Test,Test,110000,10.5%,01 April - 30 April,100,200";
+		#endregion
 
+		#region Import File Tests
 		public ImportFileTests() {
 			BuildTestData();
 		}
+		#endregion
 
+		#region Build Test Data
 		public void BuildTestData() {
 			validImportFileTest.AddTestImportData("Ricky", "D'Silva", "110000", "10.5%", "01 April - 30 April");
 			validImportFile.GenerateTestPayslips(invalidImportRecordTest);
@@ -47,7 +50,9 @@ namespace EmployeePayslipGenerator.UnitTests {
 			febLeapYearRecordTest.AddTestImportData("Leap", "Year", "80000", "9.5%", "01 February - 29 February");
 			febLeapYearRecord.GenerateTestPayslips(febLeapYearRecordTest);
 		}
+		#endregion
 
+		#region Unit Tests for Import File validation
 		[TestMethod]
 		[TestCategory("ImportFile")]
 		public void ImportValidRecord() { 
@@ -148,5 +153,6 @@ namespace EmployeePayslipGenerator.UnitTests {
 				Assert.IsTrue(expectedOutcome == ex.Message, string.Format("Expected Outcome : {0}. Actual Outcome : {1}", expectedOutcome, ex.Message));
 			}
 		}
+		#endregion
 	}
 }

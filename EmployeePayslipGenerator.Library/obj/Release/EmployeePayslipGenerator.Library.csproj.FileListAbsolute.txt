@@ -1,0 +1,4 @@
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.Library\bin\Release\EmployeePayslipGenerator.Library.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.Library\bin\Release\EmployeePayslipGenerator.Library.pdb
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.Library\obj\Release\EmployeePayslipGenerator.Library.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.Library\obj\Release\EmployeePayslipGenerator.Library.pdb

@@ -107,7 +107,6 @@ namespace EmployeeMonthlyPayslipApp {
 	#region Message Box Implementation
 	public static class MessageBox {
 		public static void Show(this Page page, string errorMessage) {
-			
 			page.ClientScript.RegisterStartupScript(
 				page.GetType(),
 				"MessageBox",

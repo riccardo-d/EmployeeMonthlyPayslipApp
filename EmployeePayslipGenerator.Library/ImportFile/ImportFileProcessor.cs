@@ -5,12 +5,13 @@ using System.Linq;
 
 namespace EmployeePayslipGenerator.Library.ImportFile {
 	public static class ImportFileProcessor {
+		#region Process File 
 		public static List<ImportFileDetail> ProcessFile(String firstName, String lastName, String annualIncome,
 														String superRate, String monthStarting) {
 			List<ImportFileDetail> importFileDetails = new List<ImportFileDetail>();
 			importFileDetails.Add(new ImportFileDetail {
-				FirstName = firstName.CleanUp(),
-				LastName = lastName.CleanUp(),
+				FirstName = firstName.RemoveIllegalCharacters(),
+				LastName = lastName.RemoveIllegalCharacters(),
 				AnnualIncomeString = annualIncome,
 				SuperRateString = superRate,
 				MonthStarting = monthStarting,
@@ -30,13 +31,15 @@ namespace EmployeePayslipGenerator.Library.ImportFile {
 			}
 			return importFileDetails;
 		}
+		#endregion
 
+		#region Split Record By Delimeter
 		public static ImportFileDetail SplitRecordByDelimeter(string fileRecord, char delimeter) {
 			string[] splitRecord = fileRecord.Split(delimeter);
 			if (splitRecord.Count() == 5) {
 				return new ImportFileDetail {
-					FirstName = splitRecord[0].CleanUp(),
-					LastName = splitRecord[1].CleanUp(),
+					FirstName = splitRecord[0].RemoveIllegalCharacters(),
+					LastName = splitRecord[1].RemoveIllegalCharacters(),
 					AnnualIncomeString = splitRecord[2],
 					SuperRateString = splitRecord[3],
 					MonthStarting = splitRecord[4],
@@ -46,5 +49,6 @@ namespace EmployeePayslipGenerator.Library.ImportFile {
 				
 			throw new Exception(string.Format("Invalid record format - {0}", fileRecord));
 		}
+		#endregion
 	}
 }

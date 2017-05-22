@@ -5,7 +5,7 @@ using EmployeePayslipGenerator.Library.ImportFile;
 
 namespace EmployeePayslipGenerator.Library.EmployeePayslip {
 	public class EmployeePayslipBase : IEmployeePayslip {
-		#region Parameter Declaration
+		#region Variable Declaration
 		internal List<IncomeTaxDetail> IncomeTaxData = new List<IncomeTaxDetail>();
 
 		public List<ImportFileDetail> ImportFileDetails = new List<ImportFileDetail>();

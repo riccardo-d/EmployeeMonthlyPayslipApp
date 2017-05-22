@@ -8,17 +8,24 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace EmployeePayslipGenerator.UnitTests {
 	[TestClass]
 	public class EmployeePayslipTests {
+		#region Variable Declarations
 		private readonly List<ImportFileDetail> payslipCalculationTest = new List<ImportFileDetail>();
 		private readonly EmployeePayslip paySlipCalculation = new EmployeePayslip();
+		
 		private readonly List<ImportFileDetail> taxBracketCalculationTest = new List<ImportFileDetail>();
 		private readonly EmployeePayslip taxBracketCalculation = new EmployeePayslip();
+		
 		private readonly List<ImportFileDetail> employeePayslipOutputTest = new List<ImportFileDetail>();
 		private readonly EmployeePayslip employeePaySlipOutput = new EmployeePayslip();
+		#endregion
 
+		#region Employee Payslip Tests
 		public EmployeePayslipTests() {
 			BuildTestData();
 		}
+		#endregion
 
+		#region Build Test Data
 		public void BuildTestData() {
 			payslipCalculationTest.AddTestImportData("PayCalculation1", "PayCalcultaion1", "60050", "9%", "01 March - 31 March");
 			paySlipCalculation.GenerateTestPayslips(payslipCalculationTest);
@@ -33,7 +40,9 @@ namespace EmployeePayslipGenerator.UnitTests {
 			employeePayslipOutputTest.AddTestImportData("EmpPayslipOutput1", "EmpPayslipOutput1", "10000", "9%", "01 March - 31 March");
 			employeePaySlipOutput.GenerateTestPayslips(employeePayslipOutputTest);
 		}
+		#endregion
 
+		#region Unit Tests for Payfile Calculations
 		[TestMethod]
 		[TestCategory("PayfileCalculations")]
 		public void CheckGrossMonthlyIncomeCalculation() {
@@ -164,7 +173,9 @@ namespace EmployeePayslipGenerator.UnitTests {
 			Assert.IsTrue(expectedNetIncome == importFileDetail.NetIncome, string.Format("Expected Net Income Result : {0}. Actual Result : {1}", expectedNetIncome.ToString(), importFileDetail.NetIncome.ToString()));
 			Assert.IsTrue(expectedSuperDeduction == importFileDetail.SuperDeduction, string.Format("Expected Super Deduction Result : {0}. Actual Result : {1}", expectedSuperDeduction.ToString(), importFileDetail.SuperDeduction.ToString()));
 		}
+		#endregion
 
+		#region Unit Test for Payfile Output
 		[TestMethod]
 		[TestCategory("PayfileCalculations")]
 		public void CheckEmployeePayslipOutput() {
@@ -177,5 +188,6 @@ namespace EmployeePayslipGenerator.UnitTests {
 
 			Assert.IsTrue(expectedResult == actualResult, string.Format("Expected Result : {0}. Actual Result : {1}", expectedResult.ToString(), actualResult.ToString()));
 		}
+		#endregion
 	}
 }

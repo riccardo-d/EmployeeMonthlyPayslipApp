@@ -1,0 +1,9 @@
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Release\EmployeePayslipGenerator.UnitTests.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Release\EmployeePayslipGenerator.UnitTests.pdb
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Release\EmployeePayslipGenerator.Library.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Release\EmployeePayslipGenerator.Library.pdb
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\obj\Release\EmployeePayslipGenerator.Test.csprojResolveAssemblyReference.cache
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\obj\Release\EmployeePayslipGenerator.UnitTests.dll
+C:\Workspaces\EmployeeMonthlyPayslipApp\EmployeePayslipGenerator.UnitTests\obj\Release\EmployeePayslipGenerator.UnitTests.pdb
